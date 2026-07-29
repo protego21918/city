@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<!--
+  Adversary Wars simulation project, set in the fictional city of Adversary City.
+  Adversary City is a fictional city; this site is its fictional city-wide atlas
+  and information portal, not any single fictional building's own site.
+  This site was built for a simulated training/CTF scenario and is not intended
+  to represent, impersonate, or harm any real city, organization, or place.
+  No real resident data, phone numbers, or addresses are used anywhere in this project.
+-->
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>City Directory · Adversary City</title>
+  <meta name="description" content="A full directory of the ten public and civic institutions operating in Adversary City, filterable by category, with district, address, and founding year for each." />
+  <meta name="robots" content="noindex, nofollow" />
+  <meta name="disclaimer" content="Adversary City is a fictional city. This site was built for a simulated training/CTF scenario and is not intended
+  to represent, impersonate, or harm any real city, organization, or place." />
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'self'; script-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'none';" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Crect width='24' height='24' rx='4' fill='%231c5f7a'/%3E%3Ccircle cx='12' cy='12' r='7' fill='none' stroke='%23f4f6f5' stroke-width='1.2'/%3E%3Cpolygon points='12,6 14,12 12,18 10,12' fill='%23f4f6f5'/%3E%3C/svg%3E" />
+  <link rel="stylesheet" href="../css/styles.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="../index.html">
+        <svg class="brand-logo" width="40" height="40" viewBox="0 0 40 40" aria-hidden="true">
+          <rect width="40" height="40" rx="6" fill="#1c5f7a" />
+          <circle cx="20" cy="20" r="13" fill="none" stroke="#f4f6f5" stroke-width="1.4" />
+          <line x1="20" y1="7" x2="20" y2="33" stroke="#f4f6f5" stroke-width="1" opacity="0.6" />
+          <line x1="7" y1="20" x2="33" y2="20" stroke="#f4f6f5" stroke-width="1" opacity="0.6" />
+          <polygon points="20,10 23,20 20,30 17,20" fill="#f4f6f5" />
+        </svg>
+        <span class="brand-text">
+          <span class="brand-name">Adversary City</span>
+          <span class="brand-sub">Official City Atlas · Est. 1847</span>
+        </span>
+      </a>
+
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav" id="nav-toggle">
+        <span class="nav-toggle-bars"></span>
+        <span class="visually-hidden">Menu</span>
+      </button>
+
+      <nav class="primary-nav" id="primary-nav" aria-label="Primary">
+        <ul class="nav-links">
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="../about/index.html">About</a></li>
+          <li><a href="../atlas/index.html">Atlas</a></li>
+          <li><a href="../directory/index.html" aria-current="page">Directory</a></li>
+          <li><a href="../news/index.html">News</a></li>
+          <li><a href="../visiting/index.html">Visiting</a></li>
+        </ul>
+        <a class="btn btn--primary" href="../visiting/index.html">Plan a Visit</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="page-intro">
+      <div class="wrap">
+        <a class="back-link" href="../index.html">Back to Adversary City</a>
+        <h1>City Directory</h1>
+        <p class="lede">Ten public and civic institutions serve Adversary City. Filter by category, or browse the full list.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="wrap">
+        <div class="filter-row" data-filter-group=".org-card[data-category]">
+          <button type="button" class="filter-chip" data-filter="all" aria-pressed="true">All</button>
+          <button type="button" class="filter-chip" data-filter="Government" aria-pressed="false">Government</button>
+          <button type="button" class="filter-chip" data-filter="Public Safety" aria-pressed="false">Public Safety</button>
+          <button type="button" class="filter-chip" data-filter="Fire &amp; Rescue" aria-pressed="false">Fire &amp; Rescue</button>
+          <button type="button" class="filter-chip" data-filter="Health" aria-pressed="false">Health</button>
+          <button type="button" class="filter-chip" data-filter="Education" aria-pressed="false">Education</button>
+          <button type="button" class="filter-chip" data-filter="Aviation" aria-pressed="false">Aviation</button>
+          <button type="button" class="filter-chip" data-filter="Finance" aria-pressed="false">Finance</button>
+          <button type="button" class="filter-chip" data-filter="Retail" aria-pressed="false">Retail</button>
+          <button type="button" class="filter-chip" data-filter="Transit" aria-pressed="false">Transit</button>
+          <button type="button" class="filter-chip" data-filter="Utilities" aria-pressed="false">Utilities</button>
+        </div>
+
+        <div class="org-grid reveal">
+          <div class="org-card" data-category="Government">
+            <div class="org-card-top"><h3>Office of the Mayor</h3><span class="tag">Government</span></div>
+            <p>Seat of the mayor-council government and the City Council, at City Hall.</p>
+            <div class="org-card-meta">
+              <span>Civic Center · B-1</span>
+              <span>100 Charter Plaza</span>
+              <span>Est. 1889</span>
+            </div>
+          </div>
+
+          <div class="org-card" data-category="Public Safety">
+            <div class="org-card-top"><h3>City Police Department</h3><span class="tag">Public Safety</span></div>
+            <p>Department headquarters, with six precincts covering the city's six districts.</p>
+            <div class="org-card-meta">
+              <span>Civic Center · B-1</span>
+              <span>100 Civic Plaza</span>
+              <span>Est. 1927</span>
+            </div>
+          </div>
+
+          <div class="org-card" data-category="Fire &amp; Rescue">
+            <div class="org-card-top"><h3>City Firestation, Station 4</h3><span class="tag">Fire &amp; Rescue</span></div>
+            <p>Engine and ladder company covering the Riverside industrial belt.</p>
+            <div class="org-card-meta">
+              <span>Riverside · B-2</span>
+              <span>220 Ladderline Road</span>
+              <span>Est. 1971</span>
+            </div>
+          </div>
+
+          <div class="org-card" data-category="Health">
+            <div class="org-card-top"><h3>City Hospital</h3><span class="tag">Health</span></div>
+            <p>Acute and emergency care campus serving the Harbor District and beyond.</p>
+            <div class="org-card-meta">
+              <span>Harbor District · A-2</span>
+              <span>4400 Meridian Parkway</span>
+              <span>Est. 1958</span>
+            </div>
+          </div>
+
+          <div class="org-card" data-category="Education">
+            <div class="org-card-top"><h3>City University</h3><span class="tag">Education</span></div>
+            <p>The city's principal institution of higher education, built around Founders Walk.</p>
+            <div class="org-card-meta">
+              <span>Founders Row · A-1</span>
+              <span>500 Founders Walk</span>
+              <span>Est. 1891</span>
+            </div>
+          </div>
+
+          <div class="org-card" data-category="Aviation">
+            <div class="org-card-top"><h3>Adversary City Airport</h3><span class="tag">Aviation</span></div>
+            <p>Regional airport (code ADV) with two terminals and scheduled service to connecting cities.</p>
+            <div class="org-card-meta">
+              <span>Skyport District · C-1</span>
+              <span>1200 Aerodrome Way</span>
+              <span>Est. 1962</span>
+            </div>
+          </div>
+
+          <div class="org-card" data-category="Finance">
+            <div class="org-card-top"><h3>City Bank</h3><span class="tag">Finance</span></div>
+            <p>Full-service bank headquartered downtown, with a branch inside City Shopping Center.</p>
+            <div class="org-card-meta">
+              <span>Ledger District · C-2</span>
+              <span>1200 Ledger Street</span>
+              <span>Est. 1948</span>
+            </div>
+          </div>
+
+          <div class="org-card" data-category="Retail">
+            <div class="org-card-top"><h3>City Shopping Center</h3><span class="tag">Retail</span></div>
+            <p>Regional retail center with dining, a cinema, and a City Bank branch.</p>
+            <div class="org-card-meta">
+              <span>Ledger District · C-2</span>
+              <span>2200 Commons Boulevard</span>
+              <span>Est. 2015</span>
+            </div>
+          </div>
+
+          <div class="org-card" data-category="Transit">
+            <div class="org-card-top"><h3>City Bus Station</h3><span class="tag">Transit</span></div>
+            <p>Central terminal for the Transit Authority's four citywide routes.</p>
+            <div class="org-card-meta">
+              <span>Riverside · B-2</span>
+              <span>100 Transit Plaza</span>
+              <span>Terminal since 1998</span>
+            </div>
+          </div>
+
+          <div class="org-card" data-category="Utilities">
+            <div class="org-card-top"><h3>City Power Station</h3><span class="tag">Utilities</span></div>
+            <p>Municipal electric utility serving Adversary City from the Riverside substation.</p>
+            <div class="org-card-meta">
+              <span>Riverside · B-2</span>
+              <span>4 Substation Road</span>
+              <span>Est. 1938</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-grid">
+        <div>
+          <div class="footer-brand-name">Adversary City</div>
+          <p>The official city atlas: districts, institutions, history, and visitor information for the fictional city of Adversary City.</p>
+        </div>
+        <div>
+          <h3>Explore</h3>
+          <ul>
+            <li><a href="../about/index.html">About the City</a></li>
+            <li><a href="../atlas/index.html">The Atlas</a></li>
+            <li><a href="../directory/index.html">City Directory</a></li>
+            <li><a href="../news/index.html">City News</a></li>
+            <li><a href="../visiting/index.html">Visiting</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3>City Information</h3>
+          <ul>
+            <li>1 Compass Way</li>
+            <li>Adversary City, AC 00000</li>
+            <li>555-0110</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="disclaimer">
+        <p><strong>Adversary City is fictional.</strong> This site is part of the Adversary Wars simulated training scenario and is not affiliated with, and does not depict, any real city, organization, or place. It is the city's own atlas and information portal and does not link to the individual sites run by institutions within the city.</p>
+        <p>&copy; <span id="year"></span> Adversary City (fictional).</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/main.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<!--
+  Adversary Wars simulation project, set in the fictional city of Adversary City.
+  Adversary City is a fictional city; this site is its fictional city-wide atlas
+  and information portal, not any single fictional building's own site.
+  This site was built for a simulated training/CTF scenario and is not intended
+  to represent, impersonate, or harm any real city, organization, or place.
+  No real resident data, phone numbers, or addresses are used anywhere in this project.
+-->
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Atlas · Adversary City</title>
+  <meta name="description" content="An interactive map of Adversary City's six districts, plus a full reference table of grid coordinates, institutions, and primary streets." />
+  <meta name="robots" content="noindex, nofollow" />
+  <meta name="disclaimer" content="Adversary City is a fictional city. This site was built for a simulated training/CTF scenario and is not intended
+  to represent, impersonate, or harm any real city, organization, or place." />
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'self'; script-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'none';" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Crect width='24' height='24' rx='4' fill='%231c5f7a'/%3E%3Ccircle cx='12' cy='12' r='7' fill='none' stroke='%23f4f6f5' stroke-width='1.2'/%3E%3Cpolygon points='12,6 14,12 12,18 10,12' fill='%23f4f6f5'/%3E%3C/svg%3E" />
+  <link rel="stylesheet" href="../css/styles.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="../index.html">
+        <svg class="brand-logo" width="40" height="40" viewBox="0 0 40 40" aria-hidden="true">
+          <rect width="40" height="40" rx="6" fill="#1c5f7a" />
+          <circle cx="20" cy="20" r="13" fill="none" stroke="#f4f6f5" stroke-width="1.4" />
+          <line x1="20" y1="7" x2="20" y2="33" stroke="#f4f6f5" stroke-width="1" opacity="0.6" />
+          <line x1="7" y1="20" x2="33" y2="20" stroke="#f4f6f5" stroke-width="1" opacity="0.6" />
+          <polygon points="20,10 23,20 20,30 17,20" fill="#f4f6f5" />
+        </svg>
+        <span class="brand-text">
+          <span class="brand-name">Adversary City</span>
+          <span class="brand-sub">Official City Atlas · Est. 1847</span>
+        </span>
+      </a>
+
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav" id="nav-toggle">
+        <span class="nav-toggle-bars"></span>
+        <span class="visually-hidden">Menu</span>
+      </button>
+
+      <nav class="primary-nav" id="primary-nav" aria-label="Primary">
+        <ul class="nav-links">
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="../about/index.html">About</a></li>
+          <li><a href="../atlas/index.html" aria-current="page">Atlas</a></li>
+          <li><a href="../directory/index.html">Directory</a></li>
+          <li><a href="../news/index.html">News</a></li>
+          <li><a href="../visiting/index.html">Visiting</a></li>
+        </ul>
+        <a class="btn btn--primary" href="../visiting/index.html">Plan a Visit</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="page-intro">
+      <div class="wrap">
+        <a class="back-link" href="../index.html">Back to Adversary City</a>
+        <h1>The City Atlas</h1>
+        <p class="lede">Six districts, gridded A through C and 1 through 2, each built around the institutions that define it.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="wrap">
+        <div class="atlas-layout reveal">
+          <div class="atlas-map-frame">
+            <svg viewBox="0 0 900 600" role="img" aria-label="Illustrated map of Adversary City, showing six districts, streets, the Adversary River, the harbor, and the location of each public institution">
+              <defs>
+                <pattern id="street-grid" width="30" height="30" patternUnits="userSpaceOnUse">
+                  <path d="M30,0 L0,0 0,30" fill="none" stroke="#6b7378" stroke-width="1" opacity="0.5" />
+                </pattern>
+                <g id="mini-compass">
+                  <circle cx="0" cy="0" r="58" fill="none" stroke="currentColor" stroke-width="1.2" opacity="0.6" />
+                  <circle cx="0" cy="0" r="44" fill="none" stroke="currentColor" stroke-width="0.6" opacity="0.4" />
+                  <line x1="0" y1="-58" x2="0" y2="58" stroke="currentColor" stroke-width="0.6" opacity="0.5" />
+                  <line x1="-58" y1="0" x2="58" y2="0" stroke="currentColor" stroke-width="0.6" opacity="0.5" />
+                  <polygon points="0,-55 9,0 0,55 -9,0" fill="currentColor" opacity="0.85" />
+                  <polygon points="-55,0 0,-9 55,0 0,9" fill="currentColor" opacity="0.5" />
+                  <text x="0" y="-64" text-anchor="middle" font-size="12" font-weight="700" fill="currentColor">N</text>
+                </g>
+                <path id="pin-shape" d="M0,0 C-9,-9 -9,-20 0,-24 C9,-20 9,-9 0,0 Z" fill="currentColor" />
+                <circle id="pin-hole" cx="0" cy="-15" r="3.2" fill="#f4f6f5" />
+              </defs>
+
+              <rect class="map-water" x="0" y="0" width="900" height="600" />
+              <rect class="map-land" x="40" y="40" width="820" height="480" rx="6" />
+              <rect class="map-street-pattern" x="40" y="40" width="820" height="480" rx="6" />
+
+              <rect class="map-road" x="40" y="255" width="820" height="50" />
+              <rect class="map-road" x="280" y="40" width="50" height="215" />
+              <rect class="map-road" x="570" y="40" width="50" height="480" />
+              <line class="map-road-line" x1="40" y1="280" x2="280" y2="280" />
+              <line class="map-road-line" x1="330" y1="280" x2="570" y2="280" />
+              <line class="map-road-line" x1="620" y1="280" x2="860" y2="280" />
+              <line class="map-road-line" x1="305" y1="40" x2="305" y2="255" />
+              <line class="map-road-line" x1="595" y1="40" x2="595" y2="255" />
+              <line class="map-road-line" x1="595" y1="305" x2="595" y2="520" />
+
+              <polygon class="map-river" points="280,305 330,305 330,520 370,580 240,580 280,520" />
+
+              <!-- Founders Row -->
+              <rect class="district-region map-active-el" data-district="founders-row" id="map-founders-row" x="40" y="40" width="240" height="215" rx="10" />
+              <rect class="map-park" x="55" y="190" width="70" height="40" rx="6" />
+              <text class="district-label map-active-el" data-district="founders-row" x="160" y="70" text-anchor="middle">Founders Row</text>
+              <use href="#pin-shape" x="100" y="120" class="map-pin map-active-el" data-district="founders-row" />
+              <use href="#pin-hole" x="100" y="120" />
+              <text class="district-sublabel map-active-el" data-district="founders-row" x="114" y="124">City University</text>
+              <text class="map-grid-label" x="270" y="245" text-anchor="end">A-1</text>
+
+              <!-- Civic Center -->
+              <rect class="district-region map-active-el" data-district="civic-center" id="map-civic-center" x="330" y="40" width="240" height="215" rx="10" />
+              <rect class="map-park" x="490" y="190" width="60" height="35" rx="6" />
+              <text class="district-label map-active-el" data-district="civic-center" x="450" y="70" text-anchor="middle">Civic Center</text>
+              <use href="#pin-shape" x="400" y="115" class="map-pin map-active-el" data-district="civic-center" />
+              <use href="#pin-hole" x="400" y="115" />
+              <text class="district-sublabel map-active-el" data-district="civic-center" x="414" y="119">Office of the Mayor</text>
+              <use href="#pin-shape" x="400" y="150" class="map-pin map-active-el" data-district="civic-center" />
+              <use href="#pin-hole" x="400" y="150" />
+              <text class="district-sublabel map-active-el" data-district="civic-center" x="414" y="154">City Police Department</text>
+              <text class="map-grid-label" x="560" y="245" text-anchor="end">B-1</text>
+
+              <!-- Skyport District -->
+              <rect class="district-region map-active-el" data-district="skyport" id="map-skyport" x="620" y="40" width="240" height="215" rx="10" />
+              <rect class="map-runway" x="640" y="175" width="170" height="8" rx="2" />
+              <line class="map-runway-line" x1="640" y1="179" x2="810" y2="179" />
+              <text class="district-label map-active-el" data-district="skyport" x="740" y="70" text-anchor="middle">Skyport District</text>
+              <use href="#pin-shape" x="690" y="140" class="map-pin map-active-el" data-district="skyport" />
+              <use href="#pin-hole" x="690" y="140" />
+              <text class="district-sublabel map-active-el" data-district="skyport" x="704" y="144">Adversary City Airport</text>
+              <text class="map-grid-label" x="850" y="245" text-anchor="end">C-1</text>
+
+              <!-- Harbor District -->
+              <rect class="district-region map-active-el" data-district="harbor" id="map-harbor" x="40" y="305" width="240" height="215" rx="10" />
+              <rect class="map-pier" x="90" y="500" width="20" height="40" />
+              <text class="district-label map-active-el" data-district="harbor" x="160" y="335" text-anchor="middle">Harbor District</text>
+              <use href="#pin-shape" x="140" y="400" class="map-pin map-active-el" data-district="harbor" />
+              <use href="#pin-hole" x="140" y="400" />
+              <text class="district-sublabel map-active-el" data-district="harbor" x="154" y="404">City Hospital</text>
+              <text class="map-grid-label" x="270" y="510" text-anchor="end">A-2</text>
+
+              <!-- Riverside -->
+              <rect class="district-region map-active-el" data-district="riverside" id="map-riverside" x="330" y="305" width="240" height="215" rx="10" />
+              <text class="district-label map-active-el" data-district="riverside" x="450" y="335" text-anchor="middle">Riverside</text>
+              <use href="#pin-shape" x="395" y="380" class="map-pin map-active-el" data-district="riverside" />
+              <use href="#pin-hole" x="395" y="380" />
+              <text class="district-sublabel map-active-el" data-district="riverside" x="409" y="384">City Firestation</text>
+              <use href="#pin-shape" x="395" y="415" class="map-pin map-active-el" data-district="riverside" />
+              <use href="#pin-hole" x="395" y="415" />
+              <text class="district-sublabel map-active-el" data-district="riverside" x="409" y="419">City Bus Station</text>
+              <use href="#pin-shape" x="395" y="450" class="map-pin map-active-el" data-district="riverside" />
+              <use href="#pin-hole" x="395" y="450" />
+              <text class="district-sublabel map-active-el" data-district="riverside" x="409" y="454">City Power Station</text>
+              <text class="map-grid-label" x="560" y="510" text-anchor="end">B-2</text>
+
+              <!-- Ledger District -->
+              <rect class="district-region map-active-el" data-district="ledger" id="map-ledger" x="620" y="305" width="240" height="215" rx="10" />
+              <text class="district-label map-active-el" data-district="ledger" x="740" y="335" text-anchor="middle">Ledger District</text>
+              <use href="#pin-shape" x="690" y="390" class="map-pin map-active-el" data-district="ledger" />
+              <use href="#pin-hole" x="690" y="390" />
+              <text class="district-sublabel map-active-el" data-district="ledger" x="704" y="394">City Bank</text>
+              <use href="#pin-shape" x="690" y="425" class="map-pin map-active-el" data-district="ledger" />
+              <use href="#pin-hole" x="690" y="425" />
+              <text class="district-sublabel map-active-el" data-district="ledger" x="704" y="429">City Shopping Center</text>
+              <text class="map-grid-label" x="850" y="510" text-anchor="end">C-2</text>
+
+              <text class="map-grid-label" x="160" y="25" text-anchor="middle">A</text>
+              <text class="map-grid-label" x="450" y="25" text-anchor="middle">B</text>
+              <text class="map-grid-label" x="740" y="25" text-anchor="middle">C</text>
+              <text class="map-grid-label" x="20" y="152" text-anchor="middle">1</text>
+              <text class="map-grid-label" x="20" y="417" text-anchor="middle">2</text>
+
+              <text class="map-water-label" x="470" y="568" text-anchor="middle">Adversary Harbor</text>
+              <use href="#mini-compass" transform="translate(800,568) scale(0.42)" class="map-compass" />
+
+              <rect class="map-frame-border" x="10" y="10" width="880" height="580" rx="4" />
+            </svg>
+          </div>
+
+          <div>
+            <ul class="district-picker">
+              <li><button type="button" class="district-btn" data-district="founders-row" aria-pressed="false">Founders Row</button></li>
+              <li><button type="button" class="district-btn" data-district="civic-center" aria-pressed="true">Civic Center</button></li>
+              <li><button type="button" class="district-btn" data-district="skyport" aria-pressed="false">Skyport</button></li>
+              <li><button type="button" class="district-btn" data-district="harbor" aria-pressed="false">Harbor</button></li>
+              <li><button type="button" class="district-btn" data-district="riverside" aria-pressed="false">Riverside</button></li>
+              <li><button type="button" class="district-btn" data-district="ledger" aria-pressed="false">Ledger</button></li>
+            </ul>
+
+            <div class="district-panel" data-district-panel="founders-row" id="panel-founders-row" hidden>
+              <span class="grid-ref">Grid A-1</span>
+              <h3>Founders Row</h3>
+              <p>A campus district anchored by City University's 1891 quadrangle, with student housing and small businesses lining Founders Walk.</p>
+              <ul class="district-panel-list">
+                <li>City University<span>Founded 1891 on Founders Walk, the city's principal institution of higher education.</span></li>
+              </ul>
+            </div>
+
+            <div class="district-panel" data-district-panel="civic-center" id="panel-civic-center">
+              <span class="grid-ref">Grid B-1</span>
+              <h3>Civic Center</h3>
+              <p>Government offices cluster around Charter Plaza and Civic Plaza, four blocks from the Adversary River waterfront.</p>
+              <ul class="district-panel-list">
+                <li>Office of the Mayor<span>Seat of the mayor-council government at 100 Charter Plaza.</span></li>
+                <li>City Police Department<span>Department headquarters at 100 Civic Plaza, in service since 1927.</span></li>
+              </ul>
+            </div>
+
+            <div class="district-panel" data-district-panel="skyport" id="panel-skyport" hidden>
+              <span class="grid-ref">Grid C-1</span>
+              <h3>Skyport District</h3>
+              <p>Built up around the runways of Adversary City Airport along Aerodrome Way, on the northeast edge of the city.</p>
+              <ul class="district-panel-list">
+                <li>Adversary City Airport (ADV)<span>Regional airport on Aerodrome Way, operating since 1962 with two terminals.</span></li>
+              </ul>
+            </div>
+
+            <div class="district-panel" data-district-panel="harbor" id="panel-harbor" hidden>
+              <span class="grid-ref">Grid A-2</span>
+              <h3>Harbor District</h3>
+              <p>The city's oldest neighborhood, built where the Adversary River meets the harbor. Meridian Parkway runs its full length.</p>
+              <ul class="district-panel-list">
+                <li>City Hospital<span>Acute and emergency care campus at 4400 Meridian Parkway, open since 1958.</span></li>
+              </ul>
+            </div>
+
+            <div class="district-panel" data-district-panel="riverside" id="panel-riverside" hidden>
+              <span class="grid-ref">Grid B-2</span>
+              <h3>Riverside</h3>
+              <p>An industrial and service belt along the Adversary River south of downtown, home to the utilities and transit infrastructure that keep the rest of the city running.</p>
+              <ul class="district-panel-list">
+                <li>City Firestation, Station 4<span>Engine and ladder company on Ladderline Road, in service since 1971.</span></li>
+                <li>City Bus Station<span>Central terminal at Transit Plaza, hub for the Transit Authority's four routes.</span></li>
+                <li>City Power Station<span>Municipal electric utility at Riverside Station, serving the city since 1938.</span></li>
+              </ul>
+            </div>
+
+            <div class="district-panel" data-district-panel="ledger" id="panel-ledger" hidden>
+              <span class="grid-ref">Grid C-2</span>
+              <h3>Ledger District</h3>
+              <p>The city's financial and retail corridor, running from Ledger Street to Commons Boulevard.</p>
+              <ul class="district-panel-list">
+                <li>City Bank<span>Headquartered at 1200 Ledger Street, chartered in 1948.</span></li>
+                <li>City Shopping Center<span>Regional retail center at 2200 Commons Boulevard with dining and a City Bank branch.</span></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--tint">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <div>
+            <h2>Reading the Grid</h2>
+            <p class="section-intro">Each district carries a letter and number, the same convention used on the fold-out maps in a printed atlas: columns A through C run west to east, rows 1 and 2 run north to south.</p>
+          </div>
+        </div>
+
+        <div class="chronology-wrap reveal">
+          <table class="chronology">
+            <caption class="visually-hidden">Full district reference table</caption>
+            <thead>
+              <tr><th scope="col">Grid</th><th scope="col">District</th><th scope="col">Institutions</th><th scope="col">Primary streets</th></tr>
+            </thead>
+            <tbody>
+              <tr><th scope="row">A-1</th><td>Founders Row</td><td>City University</td><td>Founders Walk</td></tr>
+              <tr><th scope="row">B-1</th><td>Civic Center</td><td>Office of the Mayor, City Police Department</td><td>Charter Plaza, Civic Plaza</td></tr>
+              <tr><th scope="row">C-1</th><td>Skyport District</td><td>Adversary City Airport</td><td>Aerodrome Way</td></tr>
+              <tr><th scope="row">A-2</th><td>Harbor District</td><td>City Hospital</td><td>Meridian Parkway</td></tr>
+              <tr><th scope="row">B-2</th><td>Riverside</td><td>City Firestation Station 4, City Bus Station, City Power Station</td><td>Ladderline Road, Transit Plaza, Substation Road</td></tr>
+              <tr><th scope="row">C-2</th><td>Ledger District</td><td>City Bank, City Shopping Center</td><td>Ledger Street, Commons Boulevard</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-grid">
+        <div>
+          <div class="footer-brand-name">Adversary City</div>
+          <p>The official city atlas: districts, institutions, history, and visitor information for the fictional city of Adversary City.</p>
+        </div>
+        <div>
+          <h3>Explore</h3>
+          <ul>
+            <li><a href="../about/index.html">About the City</a></li>
+            <li><a href="../atlas/index.html">The Atlas</a></li>
+            <li><a href="../directory/index.html">City Directory</a></li>
+            <li><a href="../news/index.html">City News</a></li>
+            <li><a href="../visiting/index.html">Visiting</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3>City Information</h3>
+          <ul>
+            <li>1 Compass Way</li>
+            <li>Adversary City, AC 00000</li>
+            <li>555-0110</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="disclaimer">
+        <p><strong>Adversary City is fictional.</strong> This site is part of the Adversary Wars simulated training scenario and is not affiliated with, and does not depict, any real city, organization, or place. It is the city's own atlas and information portal and does not link to the individual sites run by institutions within the city.</p>
+        <p>&copy; <span id="year"></span> Adversary City (fictional).</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/main.js" defer></script>
+</body>
+</html>

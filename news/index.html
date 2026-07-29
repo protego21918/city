@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<!--
+  Adversary Wars simulation project, set in the fictional city of Adversary City.
+  Adversary City is a fictional city; this site is its fictional city-wide atlas
+  and information portal, not any single fictional building's own site.
+  This site was built for a simulated training/CTF scenario and is not intended
+  to represent, impersonate, or harm any real city, organization, or place.
+  No real resident data, phone numbers, or addresses are used anywhere in this project.
+-->
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>City News · Adversary City</title>
+  <meta name="description" content="A dated digest of announcements from institutions across Adversary City, filterable by category, from transit delays to city hall business." />
+  <meta name="robots" content="noindex, nofollow" />
+  <meta name="disclaimer" content="Adversary City is a fictional city. This site was built for a simulated training/CTF scenario and is not intended
+  to represent, impersonate, or harm any real city, organization, or place." />
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'self'; script-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'none';" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Crect width='24' height='24' rx='4' fill='%231c5f7a'/%3E%3Ccircle cx='12' cy='12' r='7' fill='none' stroke='%23f4f6f5' stroke-width='1.2'/%3E%3Cpolygon points='12,6 14,12 12,18 10,12' fill='%23f4f6f5'/%3E%3C/svg%3E" />
+  <link rel="stylesheet" href="../css/styles.css" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="../index.html">
+        <svg class="brand-logo" width="40" height="40" viewBox="0 0 40 40" aria-hidden="true">
+          <rect width="40" height="40" rx="6" fill="#1c5f7a" />
+          <circle cx="20" cy="20" r="13" fill="none" stroke="#f4f6f5" stroke-width="1.4" />
+          <line x1="20" y1="7" x2="20" y2="33" stroke="#f4f6f5" stroke-width="1" opacity="0.6" />
+          <line x1="7" y1="20" x2="33" y2="20" stroke="#f4f6f5" stroke-width="1" opacity="0.6" />
+          <polygon points="20,10 23,20 20,30 17,20" fill="#f4f6f5" />
+        </svg>
+        <span class="brand-text">
+          <span class="brand-name">Adversary City</span>
+          <span class="brand-sub">Official City Atlas · Est. 1847</span>
+        </span>
+      </a>
+
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav" id="nav-toggle">
+        <span class="nav-toggle-bars"></span>
+        <span class="visually-hidden">Menu</span>
+      </button>
+
+      <nav class="primary-nav" id="primary-nav" aria-label="Primary">
+        <ul class="nav-links">
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="../about/index.html">About</a></li>
+          <li><a href="../atlas/index.html">Atlas</a></li>
+          <li><a href="../directory/index.html">Directory</a></li>
+          <li><a href="../news/index.html" aria-current="page">News</a></li>
+          <li><a href="../visiting/index.html">Visiting</a></li>
+        </ul>
+        <a class="btn btn--primary" href="../visiting/index.html">Plan a Visit</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="page-intro">
+      <div class="wrap">
+        <a class="back-link" href="../index.html">Back to Adversary City</a>
+        <h1>City News</h1>
+        <p class="lede">A dated digest of announcements from institutions across Adversary City, newest first.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="wrap">
+        <div class="filter-row" data-filter-group=".dispatch-item[data-category]">
+          <button type="button" class="filter-chip" data-filter="all" aria-pressed="true">All</button>
+          <button type="button" class="filter-chip" data-filter="Government" aria-pressed="false">Government</button>
+          <button type="button" class="filter-chip" data-filter="Public Safety" aria-pressed="false">Public Safety</button>
+          <button type="button" class="filter-chip" data-filter="Fire &amp; Rescue" aria-pressed="false">Fire &amp; Rescue</button>
+          <button type="button" class="filter-chip" data-filter="Health" aria-pressed="false">Health</button>
+          <button type="button" class="filter-chip" data-filter="Education" aria-pressed="false">Education</button>
+          <button type="button" class="filter-chip" data-filter="Aviation" aria-pressed="false">Aviation</button>
+          <button type="button" class="filter-chip" data-filter="Finance" aria-pressed="false">Finance</button>
+          <button type="button" class="filter-chip" data-filter="Retail" aria-pressed="false">Retail</button>
+          <button type="button" class="filter-chip" data-filter="Transit" aria-pressed="false">Transit</button>
+          <button type="button" class="filter-chip" data-filter="Utilities" aria-pressed="false">Utilities</button>
+        </div>
+
+        <ol class="dispatch-list reveal">
+          <li class="dispatch-item" data-category="Transit">
+            <div class="dispatch-meta">
+              <span class="dispatch-date">Jul 27, 2026</span>
+              <span class="dispatch-tag">Transit</span>
+              <span class="dispatch-org">City Bus Station</span>
+            </div>
+            <h3>Route 3 running behind schedule during Fairview Avenue paving</h3>
+            <p>Buses are running 10 to 15 minutes behind while crews repave Fairview Avenue.</p>
+          </li>
+          <li class="dispatch-item" data-category="Utilities">
+            <div class="dispatch-meta">
+              <span class="dispatch-date">Jul 26, 2026</span>
+              <span class="dispatch-tag">Utilities</span>
+              <span class="dispatch-org">City Power Station</span>
+            </div>
+            <h3>Cedar Substation maintenance scheduled for August 3</h3>
+            <p>Crews take the substation offline from 1 to 5 a.m., affecting about 600 customers.</p>
+          </li>
+          <li class="dispatch-item" data-category="Retail">
+            <div class="dispatch-meta">
+              <span class="dispatch-date">Jul 25, 2026</span>
+              <span class="dispatch-tag">Retail</span>
+              <span class="dispatch-org">City Shopping Center</span>
+            </div>
+            <h3>East entrance closed for door repair</h3>
+            <p>The entrance closes for repair work and reopens August 2.</p>
+          </li>
+          <li class="dispatch-item" data-category="Aviation">
+            <div class="dispatch-meta">
+              <span class="dispatch-date">Jul 24, 2026</span>
+              <span class="dispatch-tag">Aviation</span>
+              <span class="dispatch-org">Adversary City Airport</span>
+            </div>
+            <h3>Summer storms delaying scattered departures</h3>
+            <p>Storms are pushing back departures across both terminals; travelers should check flight status before heading to the airport.</p>
+          </li>
+          <li class="dispatch-item" data-category="Health">
+            <div class="dispatch-meta">
+              <span class="dispatch-date">Jul 22, 2026</span>
+              <span class="dispatch-tag">Health</span>
+              <span class="dispatch-org">City Hospital</span>
+            </div>
+            <h3>Walk-in flu clinic opens in the East Wing lobby</h3>
+            <p>The clinic runs through October and requires no appointment.</p>
+          </li>
+          <li class="dispatch-item" data-category="Finance">
+            <div class="dispatch-meta">
+              <span class="dispatch-date">Jul 21, 2026</span>
+              <span class="dispatch-tag">Finance</span>
+              <span class="dispatch-org">City Bank</span>
+            </div>
+            <h3>Certificate of deposit rates rise across all terms</h3>
+            <p>New rates take effect July 28 for both new and renewing CDs.</p>
+          </li>
+          <li class="dispatch-item" data-category="Fire &amp; Rescue">
+            <div class="dispatch-meta">
+              <span class="dispatch-date">Jul 20, 2026</span>
+              <span class="dispatch-tag">Fire &amp; Rescue</span>
+              <span class="dispatch-org">City Firestation, Station 4</span>
+            </div>
+            <h3>Hydrant flushing scheduled west of Ladderline Road</h3>
+            <p>Crews flush hydrants August 3 through 7; tap water may run cloudy in the area during that window.</p>
+          </li>
+          <li class="dispatch-item" data-category="Transit">
+            <div class="dispatch-meta">
+              <span class="dispatch-date">Jul 20, 2026</span>
+              <span class="dispatch-tag">Transit</span>
+              <span class="dispatch-org">City Bus Station</span>
+            </div>
+            <h3>Bay 7 wheelchair lift out of service</h3>
+            <p>Riders who need the lift should use Bay 6 or Bay 9 until repairs finish around August 3.</p>
+          </li>
+          <li class="dispatch-item" data-category="Retail">
+            <div class="dispatch-meta">
+              <span class="dispatch-date">Jul 20, 2026</span>
+              <span class="dispatch-tag">Retail</span>
+              <span class="dispatch-org">City Shopping Center</span>
+            </div>
+            <h3>Extended hours begin August 6 for back-to-school season</h3>
+            <p>The center stays open until 9:30 p.m. Thursday through Sunday starting August 6.</p>
+          </li>
+          <li class="dispatch-item" data-category="Education">
+            <div class="dispatch-meta">
+              <span class="dispatch-date">Jul 18, 2026</span>
+              <span class="dispatch-tag">Education</span>
+              <span class="dispatch-org">City University</span>
+            </div>
+            <h3>Engineering annex opens robotics lab to undergraduates</h3>
+            <p>The new lab in the engineering annex opens for undergraduate coursework this fall.</p>
+          </li>
+          <li class="dispatch-item" data-category="Aviation">
+            <div class="dispatch-meta">
+              <span class="dispatch-date">Jul 18, 2026</span>
+              <span class="dispatch-tag">Aviation</span>
+              <span class="dispatch-org">Adversary City Airport</span>
+            </div>
+            <h3>Terminal B north corridor renovation continues through year-end</h3>
+            <p>Passengers should allow extra time moving through the north corridor while work continues.</p>
+          </li>
+          <li class="dispatch-item" data-category="Utilities">
+            <div class="dispatch-meta">
+              <span class="dispatch-date">Jul 18, 2026</span>
+              <span class="dispatch-tag">Utilities</span>
+              <span class="dispatch-org">City Power Station</span>
+            </div>
+            <h3>Riverside Community Solar opens second block for enrollment</h3>
+            <p>Residential customers can now enroll in the second block of the community solar program.</p>
+          </li>
+          <li class="dispatch-item" data-category="Health">
+            <div class="dispatch-meta">
+              <span class="dispatch-date">Jul 15, 2026</span>
+              <span class="dispatch-tag">Health</span>
+              <span class="dispatch-org">City Hospital</span>
+            </div>
+            <h3>Monthly blood donation drive at the Meridian Parkway entrance</h3>
+            <p>The drive runs the first Saturday of every month.</p>
+          </li>
+          <li class="dispatch-item" data-category="Finance">
+            <div class="dispatch-meta">
+              <span class="dispatch-date">Jul 14, 2026</span>
+              <span class="dispatch-tag">Finance</span>
+              <span class="dispatch-org">City Bank</span>
+            </div>
+            <h3>Millbrook Branch closes for renovation</h3>
+            <p>The branch closes August 3 through 14; other branches and online banking stay open.</p>
+          </li>
+          <li class="dispatch-item" data-category="Public Safety">
+            <div class="dispatch-meta">
+              <span class="dispatch-date">Jul 12, 2026</span>
+              <span class="dispatch-tag">Public Safety</span>
+              <span class="dispatch-org">City Police Department</span>
+            </div>
+            <h3>Citizens Police Academy graduates a new class</h3>
+            <p>Four residents complete the program and join the volunteer community liaison group.</p>
+          </li>
+          <li class="dispatch-item" data-category="Government">
+            <div class="dispatch-meta">
+              <span class="dispatch-date">Jul 6, 2026</span>
+              <span class="dispatch-tag">Government</span>
+              <span class="dispatch-org">Office of the Mayor</span>
+            </div>
+            <h3>Heat emergency plan extended through September</h3>
+            <p>Cooling centers stay open citywide as the extension takes effect.</p>
+          </li>
+          <li class="dispatch-item" data-category="Fire &amp; Rescue">
+            <div class="dispatch-meta">
+              <span class="dispatch-date">Jul 5, 2026</span>
+              <span class="dispatch-tag">Fire &amp; Rescue</span>
+              <span class="dispatch-org">City Firestation, Station 4</span>
+            </div>
+            <h3>Pancake breakfast fundraiser set for August 15</h3>
+            <p>Proceeds from the 8 to 11 a.m. breakfast support the junior cadet program.</p>
+          </li>
+          <li class="dispatch-item" data-category="Education">
+            <div class="dispatch-meta">
+              <span class="dispatch-date">Jun 30, 2026</span>
+              <span class="dispatch-tag">Education</span>
+              <span class="dispatch-org">City University</span>
+            </div>
+            <h3>Fall applications up 9% over last year</h3>
+            <p>The university reports its largest applicant pool to date.</p>
+          </li>
+          <li class="dispatch-item" data-category="Government">
+            <div class="dispatch-meta">
+              <span class="dispatch-date">Jun 22, 2026</span>
+              <span class="dispatch-tag">Government</span>
+              <span class="dispatch-org">Office of the Mayor</span>
+            </div>
+            <h3>Ward Infrastructure Task Force holds first meeting</h3>
+            <p>The new task force reviews road and utility spending by district.</p>
+          </li>
+          <li class="dispatch-item" data-category="Public Safety">
+            <div class="dispatch-meta">
+              <span class="dispatch-date">Jun 15, 2026</span>
+              <span class="dispatch-tag">Public Safety</span>
+              <span class="dispatch-org">City Police Department</span>
+            </div>
+            <h3>K9 Unit adds second handler team for overnight coverage</h3>
+            <p>The added team covers the airport corridor overnight.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-grid">
+        <div>
+          <div class="footer-brand-name">Adversary City</div>
+          <p>The official city atlas: districts, institutions, history, and visitor information for the fictional city of Adversary City.</p>
+        </div>
+        <div>
+          <h3>Explore</h3>
+          <ul>
+            <li><a href="../about/index.html">About the City</a></li>
+            <li><a href="../atlas/index.html">The Atlas</a></li>
+            <li><a href="../directory/index.html">City Directory</a></li>
+            <li><a href="../news/index.html">City News</a></li>
+            <li><a href="../visiting/index.html">Visiting</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3>City Information</h3>
+          <ul>
+            <li>1 Compass Way</li>
+            <li>Adversary City, AC 00000</li>
+            <li>555-0110</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="disclaimer">
+        <p><strong>Adversary City is fictional.</strong> This site is part of the Adversary Wars simulated training scenario and is not affiliated with, and does not depict, any real city, organization, or place. It is the city's own atlas and information portal and does not link to the individual sites run by institutions within the city.</p>
+        <p>&copy; <span id="year"></span> Adversary City (fictional).</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/main.js" defer></script>
+</body>
+</html>
