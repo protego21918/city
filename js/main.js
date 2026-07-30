@@ -6,15 +6,6 @@
     yearEl.textContent = String(new Date().getFullYear());
   }
 
-  var siteHeader = document.querySelector(".site-header");
-  if (siteHeader) {
-    var updateHeaderShadow = function () {
-      siteHeader.classList.toggle("is-scrolled", window.scrollY > 8);
-    };
-    updateHeaderShadow();
-    window.addEventListener("scroll", updateHeaderShadow, { passive: true });
-  }
-
   var navToggle = document.querySelector(".nav-toggle");
   var primaryNav = document.getElementById("primary-nav");
 
